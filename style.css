@@ -7,9 +7,18 @@ html {
   font-family: serif;
 }
 
+/*make an element inline block*/
+.iBlock {
+  display: inline-block;
+}
+
 body {
   background-color: #fef9ff;
   margin: 0;
+}
+
+div {
+  text-align: center;
 }
 
 /*Header and Footer*/

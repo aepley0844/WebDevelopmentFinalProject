@@ -1,3 +1,8 @@
+// Prompt Generator
+function drawingPrompt(){
+  //js not yet done
+}
+
 // Calender:
 var imgs = [];
 var days = [];
