@@ -9,8 +9,7 @@ html {
 
 body {
   background-color: #fef9ff;
-  border-left: solid, #d4c1ec, 100px;
-  border-right: solid, #d4c1ec, 100px;
+  margin: 0;
 }
 
 /*Header and Footer*/
@@ -20,7 +19,12 @@ footer p {
 
 a:hover {
   text-decoration-style: underline;
-  color: white;
+  color: #fef9ff;
+}
+
+a {
+  color: #d4c1ec;
+  padding-top: 30px;
 }
 
 footer,
@@ -28,6 +32,14 @@ header {
   text-align: center;
   background-color: #736ced;
   color: "white";
+  margin-top: 0;
+  height: 100px;
+}
+
+h1 {
+  color: #d4c1ec;
+  margin-top: 0;
+  padding-top: 30px;
 }
 
 /*Colors we will use
