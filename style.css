@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FEF9FF;
+  border-left: solid, #D4C1EC, 10%;
+  border-right: solid, #D4C1EC, 10%;
+}
+
+/*Header and Footer*/
+footer p {
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration-style: underline;
+  color:
+}
+
+footer,
+header {
+  text-align: center;
+  background-color: #736CED;
+  color: "white";
+}
+
+
+
+/*Colors we will use
+beige - F2DFD7 - use for sidebars
+off white - FEF9FF - Use for background
+pastel purple - D4C1EC - Use for borders
+light purple - 9F9FED - Use for whatever else lol
+dark purple - 736CED - use for header and footer 
+All of this is at your own discresion. Use you're best judgement, you're NC's best and brightest for a reason LMAO.
+*/
+
+/* Calender */
+
+.monChan {
+  margin: auto;
+  text-align: center;
+}
+
+.leftBut {
+  margin-Right: 60px;
+}
+
+.rightBut {
+  margin-left: 60px;
+}
+
+table,
+td,
+th {
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: .5em;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  Background-color: #9F9FED;
+}
+
+td {
+  Background-color: #FFFFFF;
+}
