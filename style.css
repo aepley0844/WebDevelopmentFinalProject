@@ -2,11 +2,15 @@ html {
   height: 100%;
   width: 100%;
 }
+* {
+  box-sizing: border-box;
+  font-family: serif;
+}
 
 body {
   background-color: #fef9ff;
   border-left: solid, #d4c1ec, 100px;
-  border-right: solid, #d4c1ec, 10px;
+  border-right: solid, #d4c1ec, 100px;
 }
 
 /*Header and Footer*/
@@ -16,7 +20,7 @@ footer p {
 
 a:hover {
   text-decoration-style: underline;
-  color: ;
+  color: white;
 }
 
 footer,
