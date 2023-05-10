@@ -4,9 +4,9 @@ html {
 }
 
 body {
-  background-color: #FEF9FF;
-  border-left: solid, #D4C1EC, 10%;
-  border-right: solid, #D4C1EC, 10%;
+  background-color: #fef9ff;
+  border-left: solid, #d4c1ec, 100px;
+  border-right: solid, #d4c1ec, 10px;
 }
 
 /*Header and Footer*/
@@ -16,17 +16,15 @@ footer p {
 
 a:hover {
   text-decoration-style: underline;
-  color:
+  color: ;
 }
 
 footer,
 header {
   text-align: center;
-  background-color: #736CED;
+  background-color: #736ced;
   color: "white";
 }
-
-
 
 /*Colors we will use
 beige - F2DFD7 - use for sidebars
@@ -45,7 +43,7 @@ All of this is at your own discresion. Use you're best judgement, you're NC's be
 }
 
 .leftBut {
-  margin-Right: 60px;
+  margin-right: 60px;
 }
 
 .rightBut {
@@ -61,7 +59,7 @@ th {
 
 td,
 th {
-  padding: .5em;
+  padding: 0.5em;
 }
 
 table {
@@ -70,9 +68,9 @@ table {
 }
 
 th {
-  Background-color: #9F9FED;
+  background-color: #9f9fed;
 }
 
 td {
-  Background-color: #FFFFFF;
+  background-color: #ffffff;
 }
