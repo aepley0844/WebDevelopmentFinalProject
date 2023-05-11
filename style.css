@@ -100,3 +100,35 @@ th {
 td {
   background-color: #ffffff;
 }
+
+/* toolbar stuff */
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100px;
+  background-color: #202020;
+  height: 100%;
+}
+
+#toolbar * {
+  margin-bottom: 6px;
+}
+
+#toolbar label {
+  font-size: 12px;
+  color: #d4c1ec;
+}
+
+#toolbar input {
+  width: 100%;
+}
+
+#toolbar button {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #736ced;
+  padding: 2px;
+}
