@@ -15,6 +15,7 @@ html {
 body {
   background-color: #fef9ff;
   margin: 0;
+  border-left: solid 50px #d4c1ec;
 }
 
 div {
