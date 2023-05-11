@@ -103,32 +103,21 @@ td {
 
 /* toolbar stuff */
 
-#toolbar {
+.tools .color-field {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid black;
+  align-self: center;
+}
+.tools {
   display: flex;
-  flex-direction: column;
-  padding: 5px;
-  width: 100px;
-  background-color: #202020;
-  height: 100%;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 50px;
 }
-
-#toolbar * {
-  margin-bottom: 6px;
-}
-
-#toolbar label {
-  font-size: 12px;
-  color: #d4c1ec;
-}
-
-#toolbar input {
-  width: 100%;
-}
-
-#toolbar button {
-  border: none;
-  border-radius: 4px;
-  color: white;
-  background-color: #736ced;
-  padding: 2px;
+canvas {
+  border: 2px solid black;
+  cursor: pointer;
 }

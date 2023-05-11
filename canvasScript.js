@@ -7,67 +7,41 @@ let modifiers = ["riding the subway", "throwing a tantrum", "teaching a lecture"
     outputLocation.textContent = currentNoun + " " + currentModifier;
 }
 
- function draw() {
-        let canvas = document.getElementById("DrawStuff");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
-        }
-      }
+function canvasStuff(){
+let canvas = document.getElementById("canvas");
+canvas.width = window.innerWidth - 60;
+canvas.height = 400;
 
-      const canvas = document.getElementById('drawing-board');
-const toolbar = document.getElementById('toolbar');
-const ctx = canvas.getContext('2d');
+let context = canvas.getContext("2d");
+context.fillStyle = "white";
+context.fillRect(0,0, canvas.width, canvas.height);
 
-const canvasOffsetX = canvas.offsetLeft;
-const canvasOffsetY = canvas.offsetTop;
+let draw_color = "black"
+let draw_width = "2"
+let is_drawing = false;
 
-canvas.width = window.innerWidth - canvasOffsetX;
-canvas.height = window.innerHeight - canvasOffsetY;
+canvas.addEventListener("mousedown", start, false);
+canvas.addEventListener("click", start, false)
+canvas.addEventListener("mousemove", draw, false);
 
-let isPainting = false;
-let lineWidth = 5;
-let startX;
-let startY;
-
-toolbar.addEventListener('click', e => {
-    if (e.target.id === 'clear') {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-});
-
-toolbar.addEventListener('change', e => {
-    if(e.target.id === 'stroke') {
-        ctx.strokeStyle = e.target.value;
-    }
-
-    if(e.target.id === 'lineWidth') {
-        lineWidth = e.target.value;
-    }
-    
-});
-
-const draw = (e) => {
-    if(!isPainting) {
-        return;
-    }
-
-    ctx.lineWidth = lineWidth;
-    ctx.lineCap = 'round';
-
-    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
-    ctx.stroke();
+function start(event){
+    is_drawing = "true";
+    context.beginPath();
+    context.moveTo(event.clientX - canvas.offsetLeft,
+                    event.clientY - canvas.offsetTop);
+    event.preventDefault();
 }
 
-canvas.addEventListener('mousedown', (e) => {
-    isPainting = true;
-    startX = e.clientX;
-    startY = e.clientY;
-});
+function draw(event){
+    if (is_drawing){
+        context.lineTo(event.clientX - canvas.offsetLeft,
+                        event.clientY - canvas.offsetTop);
+        content.strokeStyle = draw_color;
+        context.lineWidth = draw_width;
+        context.lineCap = "round";
+        context.lineJoin = "round";
+        context.stroke();
+    }
+}
 
-canvas.addEventListener('mouseup', e => {
-    isPainting = false;
-    ctx.stroke();
-    ctx.beginPath();
-});
-
-canvas.addEventListener('mousemove', draw);
+}

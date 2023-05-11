@@ -6,7 +6,7 @@
   <script src="canvasScript.js"></script>
 </head>
 
-<body>
+<body onload="canvasStuff();">
 
 <header>
   <h1>Canvas</h1>
@@ -23,19 +23,21 @@
     <button onclick="drawingPrompt();">Click For a Prompt</button>
     <p id="promptOutput">Output here!</p>
   </div>
-</div id="canvas" class="iblock">
-<div class="iBlock">
-        <div id="toolbar">
-            <h1>Draw.</h1>
-            <label for="stroke">Stroke</label>
-            <input id="stroke" name='stroke' type="color">
-            <label for="lineWidth">Line Width</label>
-            <input id="lineWidth" name='lineWidth' type="number" value="5">
-            <button id="clear">Clear</button>
-        </div>
-         <div class="drawing-board">
-            <canvas id="drawing-board"></canvas>
-        </div>
+
+<div class="field">
+  <canvas id="canvas"></canvas>
+  <div class="tools">
+    <button type="button" class="button">Undo</button>
+    <button type="button" class="button">Clear</button>
+
+    <div class="color-field" style="background: red;"></div>
+    <div class="color-field" style="background: blue;"></div>
+    <div class="color-field" style="background: green;"></div>
+    <div class="color-field" style="background: yellow;"></div>
+    
+    <input type="color" class="color-picker">
+    <input type="range" min="1" max="100" class="pen-range">
+  </div>
 </div>
 
 <footer>
@@ -43,5 +45,6 @@
   <p><a href="workDone.html"> What We Did</a></p>
   <p><a href="Index.html"> Home</a></p>
 </footer>
+
 </body>
 </html>
