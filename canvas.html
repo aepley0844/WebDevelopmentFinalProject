@@ -10,34 +10,39 @@
     <header>
       <h1>Canvas</h1>
     </header>
-
-    <div class="iBlock">
-      <h2>Welcome to the Canvas!</h2>
-      <p>The Canvas allows you to sketch in browser!</p>
-      <p>Draw whatever your heart desires or use our prompt generator!</p>
-      <div>
-        <button onclick="drawingPrompt();">Click For a Prompt</button>
-        <p id="promptOutput">Output here!</p>
+    <section>
+      <div class="iBlock">
+        <h2>Welcome to the Canvas!</h2>
+        <p>The Canvas allows you to sketch in browser!</p>
+        <p>Draw whatever your heart desires or use our prompt generator!</p>
+        <div>
+          <button onclick="drawingPrompt();">Click For a Prompt</button>
+          <p id="promptOutput">Output here!</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tools">
-      <button type="button" class="button">Undo</button>
-      <button type="button" class="button">Clear</button>
+      <div class="iBlock">
+        <div class="tools">
+          <h3>Tools</h3>
+          <button type="button" class="button">Undo</button>
+          <button type="button" class="button">Clear</button>
+          <div class="color-field" id="Cred" style="background: red"></div>
+          <div class="color-field" id="Cblue" style="background: blue"></div>
+          <div class="color-field" id="Cgreen" style="background: green"></div>
+          <div
+            class="color-field"
+            id="Cyellow"
+            style="background: yellow"
+          ></div>
+          <input type="color" id="colorPicker" />
+          <input type="range" min="1" max="100" id="penSize" />
+        </div>
+      </div>
 
-      <div class="color-field" id="Cred" style="background: red"></div>
-      <div class="color-field" id="Cblue" style="background: blue"></div>
-      <div class="color-field" id="Cgreen" style="background: green"></div>
-      <div class="color-field" id="Cyellow" style="background: yellow"></div>
-
-      <input type="color" class="color-picker" />
-      <input type="range" min="1" max="100" class="pen-range" />
-    </div>
-
-    <div class="field">
-      <canvas id="canvas"></canvas>
-    </div>
-
+      <div class="iBlock">
+        <canvas id="canvas" width="800" height="400"></canvas>
+      </div>
+    </section>
     <footer>
       <p><a href="Calender.html"> Calender</a></p>
       <p><a href="workDone.html"> What We Did</a></p>

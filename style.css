@@ -1,3 +1,12 @@
+/*Colors we will use
+ beige - F2DFD7 - use for sidebars
+ off white - FEF9FF - Use for background
+ pastel purple - D4C1EC - Use for borders
+ light purple - 9F9FED - Use for whatever else lol
+ dark purple - 736CED - use for header and footer
+ All of this is at your own discresion. Use you're best judgement, you're NC's best and brightest for a reason LMAO.
+ */
+
 html {
   height: 100%;
   width: 100%;
@@ -58,15 +67,6 @@ h1 {
   padding-top: 30px;
 }
 
-/*Colors we will use
- beige - F2DFD7 - use for sidebars
- off white - FEF9FF - Use for background
- pastel purple - D4C1EC - Use for borders
- light purple - 9F9FED - Use for whatever else lol
- dark purple - 736CED - use for header and footer
- All of this is at your own discresion. Use you're best judgement, you're NC's best and brightest for a reason LMAO.
- */
-
 /* Calender */
 
 .monChan {
@@ -118,7 +118,9 @@ thiswebsite {
 
 /* toolbar stuff */
 
-.tools .color-field {
+.tools .color-field,
+.tools button,
+.tools input {
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -128,15 +130,15 @@ thiswebsite {
 }
 .tools {
   display: inline-flex;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
   margin-top: 50px;
+  background-color: #d4c1ec;
 }
 canvas {
   border: 2px solid black;
   cursor: pointer;
 }
-
-.field {
-  display: inline-block;
+section div {
+  margin: 10px;
 }

@@ -7,28 +7,51 @@ let modifiers = ["riding the subway", "throwing a tantrum", "teaching a lecture"
     outputLocation.textContent = currentNoun + " " + currentModifier;
 }
 
+//using
 function canvasStuff(){
-let canvas = document.getElementById("canvas");
-canvas.width = 800;
-canvas.height = 600;
 
-let context = canvas.getContext("2d");
-context.fillStyle = "white";
-context.fillRect(0,0, canvas.width, canvas.height);
-
+//establishing variables
 let draw_color = "black"
 let draw_width = "2"
 let is_drawing = false;
 
-function changeColor(input){
-    draw_color = input.style.backgroundColor;
-}
+let canvas = document.getElementById("canvas");
 
+//setting canvas context
+let context = canvas.getContext("2d");
+context.fillStyle = "white";
+context.fillRect(0,0, canvas.width, canvas.height);
+
+//selecting which color to draw with
+let CRed = document.getElementById("Cred");
+let CBlue = document.getElementById("Cblue");
+let CGreen = document.getElementById("Cgreen");
+let CYellow = document.getElementById("Cyellow");
+let CInput = document.getElementById("colorPicker")
+CRed.addEventListener("click", function(){
+    draw_color = "red";})
+CBlue.addEventListener("click", function(){
+    draw_color = "blue";});
+CGreen.addEventListener("click",  function(){
+    draw_color = "green";})
+CYellow.addEventListener("click", function(){
+    draw_color = "yellow";})
+CInput.addEventListener("input", function(){
+    draw_color = CInput.value;
+})
+//setting brush size
+let BSize = document.getElementById("penSize");
+BSize.addEventListener("input", function(){
+    draw_width = BSize.value;
+})
+
+//checking for when to draw and when to stop drawing
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false)
 
+//starts the drawing process
 function start(event){
     is_drawing = "true";
     context.beginPath();
@@ -37,6 +60,7 @@ function start(event){
     event.preventDefault();
 }
 
+//actually does the drawing
 function draw(event){
     if (is_drawing){
         context.lineTo(event.clientX - canvas.offsetLeft,
@@ -49,6 +73,7 @@ function draw(event){
     }
 }
 
+//stops the drawing
 function stop(event){
     if (is_drawing){
         context.stroke();
