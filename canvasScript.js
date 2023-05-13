@@ -9,8 +9,8 @@ let modifiers = ["riding the subway", "throwing a tantrum", "teaching a lecture"
 
 function canvasStuff(){
 let canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth - 60;
-canvas.height = 400;
+canvas.width = 800;
+canvas.height = 600;
 
 let context = canvas.getContext("2d");
 context.fillStyle = "white";
@@ -20,9 +20,14 @@ let draw_color = "black"
 let draw_width = "2"
 let is_drawing = false;
 
+function changeColor(input){
+    draw_color = input.style.backgroundColor;
+}
+
 canvas.addEventListener("mousedown", start, false);
-canvas.addEventListener("click", start, false)
 canvas.addEventListener("mousemove", draw, false);
+canvas.addEventListener("mouseup", stop, false);
+canvas.addEventListener("mouseout", stop, false)
 
 function start(event){
     is_drawing = "true";
@@ -36,12 +41,21 @@ function draw(event){
     if (is_drawing){
         context.lineTo(event.clientX - canvas.offsetLeft,
                         event.clientY - canvas.offsetTop);
-        content.strokeStyle = draw_color;
+        context.strokeStyle = draw_color;
         context.lineWidth = draw_width;
         context.lineCap = "round";
         context.lineJoin = "round";
         context.stroke();
     }
+}
+
+function stop(event){
+    if (is_drawing){
+        context.stroke();
+        context.closePath();
+        is_drawing = false;
+    }
+    event.preventDefault();
 }
 
 }

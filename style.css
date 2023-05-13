@@ -16,6 +16,7 @@ body {
   background-color: #fef9ff;
   margin: 0;
   border-left: solid 50px #d4c1ec;
+  border-right: solid 50px #d4c1ec;
 }
 
 div {
@@ -44,22 +45,27 @@ header {
   color: "white";
   margin-top: 0;
   height: 100px;
+  margin-bottom: 20px;
+}
+
+#move {
+  margin-left: 20px;
 }
 
 h1 {
-  color: #d4c1ec;
+  color: #f2dfd7;
   margin-top: 0;
   padding-top: 30px;
 }
 
 /*Colors we will use
-beige - F2DFD7 - use for sidebars
-off white - FEF9FF - Use for background
-pastel purple - D4C1EC - Use for borders
-light purple - 9F9FED - Use for whatever else lol
-dark purple - 736CED - use for header and footer 
-All of this is at your own discresion. Use you're best judgement, you're NC's best and brightest for a reason LMAO.
-*/
+ beige - F2DFD7 - use for sidebars
+ off white - FEF9FF - Use for background
+ pastel purple - D4C1EC - Use for borders
+ light purple - 9F9FED - Use for whatever else lol
+ dark purple - 736CED - use for header and footer
+ All of this is at your own discresion. Use you're best judgement, you're NC's best and brightest for a reason LMAO.
+ */
 
 /* Calender */
 
@@ -101,23 +107,36 @@ td {
   background-color: #ffffff;
 }
 
+whatwedid {
+  text-align: center;
+}
+
+thiswebsite {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 /* toolbar stuff */
 
 .tools .color-field {
   height: 40px;
   width: 40px;
   cursor: pointer;
-  display: inline-block;
   border: 2px solid black;
   align-self: center;
+  margin: 5px;
 }
 .tools {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 50px;
 }
 canvas {
   border: 2px solid black;
   cursor: pointer;
+}
+
+.field {
+  display: inline-block;
 }
