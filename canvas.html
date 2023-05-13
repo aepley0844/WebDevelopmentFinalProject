@@ -11,7 +11,7 @@
       <h1>Canvas</h1>
     </header>
     <section>
-      <div class="iBlock">
+      <div id="promptGen">
         <h2>Welcome to the Canvas!</h2>
         <p>The Canvas allows you to sketch in browser!</p>
         <p>Draw whatever your heart desires or use our prompt generator!</p>
@@ -20,27 +20,47 @@
           <p id="promptOutput">Output here!</p>
         </div>
       </div>
-
-      <div class="iBlock">
-        <div class="tools">
-          <h3>Tools</h3>
-          <button type="button" class="button">Undo</button>
-          <button type="button" class="button">Clear</button>
-          <div class="color-field" id="Cred" style="background: red"></div>
-          <div class="color-field" id="Cblue" style="background: blue"></div>
-          <div class="color-field" id="Cgreen" style="background: green"></div>
-          <div
-            class="color-field"
-            id="Cyellow"
-            style="background: yellow"
-          ></div>
-          <input type="color" id="colorPicker" />
-          <input type="range" min="1" max="100" id="penSize" />
+      <div id="canvasAndTools">
+        <div>
+          <div class="tools">
+            <h3>Tools</h3>
+            <div>
+              <!--<img
+                height="36px"
+                width="36px"
+                src="images/Bucket.png"
+                alt="this is a paint bucket"
+              /> -->
+              <input id="paintBucket" type="color" />
+            </div>
+            <div class="color-field" id="eraser">
+              <img
+                width="36px"
+                height="36px"
+                src="images/Eraser.png"
+                alt="eraser"
+              />
+            </div>
+            <div class="color-field" id="Cred" style="background: red"></div>
+            <div class="color-field" id="Cblue" style="background: blue"></div>
+            <div
+              class="color-field"
+              id="Cgreen"
+              style="background: green"
+            ></div>
+            <div
+              class="color-field"
+              id="Cyellow"
+              style="background: yellow"
+            ></div>
+            <div><input type="color" id="colorPicker" /></div>
+            <div><input type="range" min="1" max="30" id="penSize" /></div>
+          </div>
         </div>
-      </div>
 
-      <div class="iBlock">
-        <canvas id="canvas" width="800" height="400"></canvas>
+        <div>
+          <canvas id="canvas" width="800" height="450"></canvas>
+        </div>
       </div>
     </section>
     <footer>

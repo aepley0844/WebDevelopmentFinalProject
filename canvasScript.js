@@ -7,19 +7,20 @@ let modifiers = ["riding the subway", "throwing a tantrum", "teaching a lecture"
     outputLocation.textContent = currentNoun + " " + currentModifier;
 }
 
-//using
+
 function canvasStuff(){
 
 //establishing variables
 let draw_color = "black"
-let draw_width = "2"
+let draw_width = "15"
 let is_drawing = false;
 
 let canvas = document.getElementById("canvas");
 
 //setting canvas context
 let context = canvas.getContext("2d");
-context.fillStyle = "white";
+let canvasColor = "#cce2c1"
+context.fillStyle = canvasColor;
 context.fillRect(0,0, canvas.width, canvas.height);
 
 //selecting which color to draw with
@@ -27,7 +28,8 @@ let CRed = document.getElementById("Cred");
 let CBlue = document.getElementById("Cblue");
 let CGreen = document.getElementById("Cgreen");
 let CYellow = document.getElementById("Cyellow");
-let CInput = document.getElementById("colorPicker")
+let CInput = document.getElementById("colorPicker");
+let eraser = document.getElementById("eraser");
 CRed.addEventListener("click", function(){
     draw_color = "red";})
 CBlue.addEventListener("click", function(){
@@ -38,6 +40,9 @@ CYellow.addEventListener("click", function(){
     draw_color = "yellow";})
 CInput.addEventListener("input", function(){
     draw_color = CInput.value;
+})
+eraser.addEventListener("click", function(){
+    draw_color = canvasColor;
 })
 //setting brush size
 let BSize = document.getElementById("penSize");
@@ -82,5 +87,13 @@ function stop(event){
     }
     event.preventDefault();
 }
+
+//clearing the canvas
+let paintBucket = document.getElementById("paintBucket");
+paintBucket.addEventListener("input", function(){
+    canvasColor = paintBucket.value
+    context.fillStyle = canvasColor;
+context.fillRect(0,0, canvas.width, canvas.height);
+})
 
 }

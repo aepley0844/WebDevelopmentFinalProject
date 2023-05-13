@@ -54,6 +54,9 @@ header {
   color: "white";
   margin-top: 0;
   height: 100px;
+}
+
+header {
   margin-bottom: 20px;
 }
 
@@ -65,55 +68,6 @@ h1 {
   color: #f2dfd7;
   margin-top: 0;
   padding-top: 30px;
-}
-
-/* Calender */
-
-.monChan {
-  margin: auto;
-  text-align: center;
-}
-
-.leftBut {
-  margin-right: 60px;
-}
-
-.rightBut {
-  margin-left: 60px;
-}
-
-table,
-td,
-th {
-  border: solid 1px black;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: 0.5em;
-}
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-th {
-  background-color: #9f9fed;
-}
-
-td {
-  background-color: #ffffff;
-}
-
-whatwedid {
-  text-align: center;
-}
-
-thiswebsite {
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 /* toolbar stuff */
@@ -128,17 +82,34 @@ thiswebsite {
   align-self: center;
   margin: 5px;
 }
-.tools {
-  display: inline-flex;
-  justify-content: top;
-  flex-direction: column;
-  margin-top: 50px;
-  background-color: #d4c1ec;
+
+.tools div {
+  margin: auto;
 }
 canvas {
   border: 2px solid black;
   cursor: pointer;
+  margin-left: 15px;
 }
-section div {
-  margin: 10px;
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+section h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#canvasAndTools {
+  border: 3px solid black;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  background-color: #9f9fed;
+}
+
+#promptGen {
+  margin: 15px;
 }
