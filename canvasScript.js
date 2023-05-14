@@ -96,4 +96,13 @@ paintBucket.addEventListener("input", function(){
 context.fillRect(0,0, canvas.width, canvas.height);
 })
 
+//save your drawing as an image
+let saveIcon = document.getElementById("saveIcon");
+saveIcon.addEventListener("click", function(){
+    const link = document.createElement("a");
+    link.download = "image.png";
+    link.href = canvas.toDataURL();
+    link.click();
+})
+
 }
