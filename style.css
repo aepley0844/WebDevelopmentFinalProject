@@ -70,6 +70,10 @@ h1 {
   padding-top: 30px;
 }
 
+h3 {
+  text-align: center;
+}
+
 /* toolbar stuff */
 
 .tools .color-field,
@@ -161,4 +165,9 @@ whatwedid {
 thiswebsite {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
 }

@@ -107,14 +107,26 @@ saveIcon.addEventListener("click", function(){
 
 }
 
+
+
+
+
+
+
 // Calender:
 var imgs = [];
 var days = [];
 var months = [];
 
+
+
+
 var daysNum = 0;
 var month = "";
 var monthNum = 0;
+
+
+
 
 //Days in a Month
 function daysMonth(x, y){
@@ -198,14 +210,15 @@ function reDay(x, y){
  }
  for(let j = 1; j <= x; j++){
    let monDay = y + " " + j;
-   console.log(monDay);
-   let img = localStorage.getItem(monDay);
-   if (img == null){
-     img = " ";
+   let imgC = localStorage.getItem(monDay);
+   if (imgC == null){
+     imgC = " ";
    }
-   document.getElementById("d"+j).textContent = j + "\n" + img;
+   document.getElementById("d"+j).innerHTML = j + "\n" + "&#60; img src = &#34;" + imgC + "&#34; alt=&#34;name&#34; width=&#34;250&#34; height=&#34;250&#34;&#62;";
  }
 }
+
+
  
 //Initial Calender
 window.onload = function(){
@@ -255,8 +268,10 @@ function fowardMonth(){
 
 //getting img
 function Submit(){
- let date = document.getElementById("dateH");
- let img = document.getElementById("imgH");
+ let date = document.getElementById("dateH").value;
+ let img = document.getElementById("imgH").value;
  localStorage.setItem(date, img);
  console.log(date + " " + img);
 }
+
+
