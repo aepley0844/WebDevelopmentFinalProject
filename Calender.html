@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>WedDevFinal: Calender</title>
@@ -10,14 +10,15 @@
   <body>
     <header>
       <h1>Calender</h1>
+      <p id="DiR"></p>
     </header>
 
-    <p>Submit<input type="file" /></p>
-    <p>Input: month day ex. (April 5) - <input type="text" /></p>
+    <p>Submit<input type="file" id="imgH" /></p>
+    <p>Input: month day ex. (April 5) - <input type="text" id="dateH" /></p>
     <p><button onclick="Submit();">Submit</button></p>
     <div class="monChan">
-      <button onclick="backMonth()" class="leftBut">Back</button
-      ><button onclick="fowardMonth()" class="rightBut">Forward</button>
+      <button onclick="backMonth()" class="leftBut">Back</button>
+      <button onclick="fowardMonth()" class="rightBut">Forward</button>
     </div>
     <table>
       <tr>

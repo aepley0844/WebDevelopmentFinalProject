@@ -106,7 +106,7 @@ function drawingPrompt(){
  })
  
  }
-  // Calender:
+   // Calender:
  var imgs = [];
  var days = [];
  var months = [];
@@ -191,13 +191,13 @@ function drawingPrompt(){
   }
   for(let j = 1; j <= x; j++){
     let monDay = y + " " + j;
+    console.log(monDay)
     let imgC = localStorage.getItem(monDay);
     console.log(imgC);
     if (imgC != null){
      let leave = imgC.indexOf(".");
      imgN = imgC.substring(12, leave);
      imgC = imgC.substring(12);
-     console.log(imgC);
      document.getElementById("d"+j).innerHTML = j + "\n" + "<img src = &#34;" + imgC + "&#34; alt=&#34;" + imgN + "&#34; width=&#34;250&#34; height=&#34;250&#34;>";
     }
     else{
@@ -206,14 +206,31 @@ function drawingPrompt(){
    
   }
  }
+
+
+ function countDay(x){
+   let counter = 0;
+   for(let i = x; i == 0; i --){
+     if (document.getElementById("d"+i).textContent.length() > 2){
+       counter ++;
+     }
+     else {
+       break;
+     }
+   }
+   console.log(counter);
+   return counter;
+ }
  
  //Initial Calender and days in a row
  window.onload = function(){
   var dt = new Date();
+  var day = dt.getDate();
   let monthNum = dt.getMonth();
   let month = daysMonth(monthNum, "m");
  document.getElementById("month").textContent = month;
  reDay(daysMonth(monthNum, "Num"), daysMonth(monthNum, "m"));
+  // document.getElementById("DiR").innerHTML = countDay(day);
  }
   function backMonth(){
   //changing Month name
@@ -240,6 +257,5 @@ function drawingPrompt(){
   localStorage.setItem(date, img);
   console.log(date + " " + img);
  } 
-
 
 
