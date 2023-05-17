@@ -108,17 +108,10 @@ saveIcon.addEventListener("click", function(){
 }
 
 
-
-
-
-
-
 // Calender:
 var imgs = [];
 var days = [];
 var months = [];
-
-
 
 
 var daysNum = 0;
