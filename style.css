@@ -58,6 +58,11 @@ header {
   background-color: #736ced;
   color: "white";
   margin-top: 0;
+}
+footer {
+  padding-bottom: 50px;
+}
+header {
   height: 100px;
 }
 
@@ -72,9 +77,11 @@ header {
 h1 {
   color: #f2dfd7;
   margin-top: 0;
+  padding-top: 50px;
 }
 
-h3 {
+h3,
+h2 {
   text-align: center;
 }
 
