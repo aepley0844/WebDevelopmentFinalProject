@@ -258,4 +258,6 @@ function drawingPrompt(){
   console.log(date + " " + img);
  } 
 
-
+function clearStorage(){
+  localStorage.clear()
+}
